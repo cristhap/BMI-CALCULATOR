@@ -1,0 +1,51 @@
+/* CSS untuk tampilan aplikasi Kalkulator BMI */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    width: 100px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#hasilBMI {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#statusBMI {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}

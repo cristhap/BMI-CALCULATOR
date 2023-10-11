@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kalkulator BMI</title>
+    <script>
+        function hitungBMI() {
+            // Mengambil nilai berat badan dan tinggi badan dari input
+            var beratBadan = parseFloat(document.getElementById("beratBadan").value);
+            var tinggiBadan = parseFloat(document.getElementById("tinggiBadan").value);
+
+            // Menghitung BMI
+            var tinggiMeters = tinggiBadan / 100;
+            var bmi = beratBadan / (tinggiMeters * tinggiMeters);
+
+            // Menampilkan hasil BMI
+            document.getElementById("hasilBMI").innerHTML = "BMI Anda: " + bmi.toFixed(2);
+
+            // Menampilkan status BMI
+            var statusBMI = "";
+            if (bmi < 18.5) {
+                statusBMI = "Underweight";
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                statusBMI = "Normal weight";
+            } else if (bmi >= 25 && bmi <= 29.9) {
+                statusBMI = "Overweight";
+            } else {
+                statusBMI = "Obesity";
+            }
+            document.getElementById("statusBMI").innerHTML = "Status BMI Anda: " + statusBMI;
+        }
+    </script>
+</head>
+<body>
+    <h1>Kalkulator BMI</h1>
+    <p>Masukkan berat badan (KG): <input type="text" id="beratBadan"></p>
+    <p>Masukkan tinggi badan (CM): <input type="text" id="tinggiBadan"></p>
+    <button onclick="hitungBMI()">Hitung BMI</button>
+    <p id="hasilBMI"></p>
+    <p id="statusBMI"></p>
+</body>
+</html>
